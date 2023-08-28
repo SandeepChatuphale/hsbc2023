@@ -1,0 +1,123 @@
+
+
+1)Given:
+public static void before() {
+ Set set = new TreeSet();
+ set.add("2");
+ set.add(3);
+ set.add("1");
+ Iterator it = set.iterator();
+ while (it.hasNext())
+ System.out.print(it.next() + " ");
+}
+ Which statements are true?
+ A. The before() method will print 1 2
+ B. The before() method will print 1 2 3
+ C. The before() method will print three numbers, but the order cannot be determined
+ D. The before() method will not compile
+ E. The before() method will throw an exception at runtime
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2) Given:
+import java.util.*;
+class MapEQ {
+ public static void main(String[] args) {
+ Map<ToDos, String> m = new HashMap<ToDos, String>();
+ ToDos t1 = new ToDos("Monday");
+ ToDos t2 = new ToDos("Monday");
+ ToDos t3 = new ToDos("Tuesday");
+ m.put(t1, "doLaundry");
+ m.put(t2, "payBills");
+ m.put(t3, "cleanAttic");
+ System.out.println(m.size());
+} }
+class ToDos{
+ String day;
+ ToDos(String d) { day = d; }
+ public boolean equals(Object o) {
+ return ((ToDos)o).day == this.day;
+ }
+ // public int hashCode() { return 9; }
+}
+ Which is correct? (Choose all that apply.)
+ A. As the code stands it will not compile
+ B. As the code stands the output will be 2
+ C. As the code stands the output will be 3
+ D. If the hashCode() method is uncommented the output will be 2
+ E. If the hashCode() method is uncommented the output will be 3
+ F. If the hashCode() method is uncommented the code will not compile
+
+
+
+
+
+
+
+
+
+
+3) Given:
+ 3. import java.util.*;
+ 4. class Dog { int size; Dog(int s) { size = s; } }
+ 5. public class FirstGrade {
+ 6. public static void main(String[] args) {
+ 7. TreeSet<Integer> i = new TreeSet<Integer>();
+ 8. TreeSet<Dog> d = new TreeSet<Dog>();
+ 9.
+10. d.add(new Dog(1)); d.add(new Dog(2)); d.add(new Dog(1));
+11. i.add(1); i.add(2); i.add(1);
+12. System.out.println(d.size() + " " + i.size());
+13. }
+14. }
+ What is the result?
+ A. 1 2
+ B. 2 2
+ C. 2 3
+ D. 3 2
+ E. 3 3
+ F. Compilation fails
+ G. An exception is thrown at runtime
+
+
+
+
+
+
+4)
+import java.util.*;
+class UtilitiesTest {
+    public static void main(String[] args) {
+        List < int > intList = new ArrayList < > ();
+        intList.add(10);
+        intList.add(20);
+        System.out.println("The list is: " + intList);
+}
+}
+
+A. It prints the following: The list is: [10, 20] 
+B. It prints the following: The list is: [20, 10] 
+C. It results in a compiler error 
+D. It results in a runtime exception
+
+
+
+
+
+
+
