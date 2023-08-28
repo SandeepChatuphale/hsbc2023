@@ -1,0 +1,109 @@
+1. Predict the correct sequence of output after executing the below Java application
+public class MyThread implements Runnable {
+   String msg = "default";
+   public MyThread(String s) {
+      this.msg = s;
+   }
+   public void run() {
+      System.out.println(msg);
+   }
+   public static void main(String args[]) {
+      new Thread(new MyThread("String1")).run();
+      new Thread(new MyThread("String2")).run();
+      System.out.println("end");
+   }
+}
+A. The program will print only "end"
+B. The program would always print in the order - String1 String2 end
+C. The program would print String 1 and String 2 in random order followed by end
+D. No specific order is guaranteed.
+
+
+2. Which of the following statements are true regarding synchronization ?
+A. Making a synchronized method recursive will cause a deadlock
+B. Only non-static member variables are accessible in a synchronized method.
+C. A synchronized method cannot be executed simultaneously by more than one thread on the same object.
+D. A synchronized method cannot call a non-synchronized method in its body.
+
+
+3. In Java, a thread can be created by 
+A. Extending the Thread class
+B. Implementing the Runnable interface
+C. Both of the Above
+D. None of these
+
+
+4. Predict the correct output of below Java code
+    public class Test implements Runnable{
+         public static void main(String args[]) {
+	      Thread t = new Thread(new Test());
+	      t.start();
+	      System.out.println("This is main thread");
+	 }
+	 @Override
+	 public void run() {
+		System.out.println("Thread has started");
+	 }
+    }
+
+A. This is main thread
+   Thread has started
+B. Thread has started
+   This is main thread
+C. No specific order is guaranteed
+D. None of the Above
+
+
+5. Predict the correct output of below Java code
+    public class Test extends Thread{
+         public static void main(String args[]) {
+	      Test t = new Test();
+	      t.run();
+	      t.start();
+	 }
+	 @Override
+	 public void run() {
+	      System.out.println("running");
+	 }
+    }
+A. running
+   running
+B. running
+C. Compilation Error
+D. Runtime Error
+
+
+
+
+6
+The following block of code creates a Thread using a Runnable target:
+Runnable target = new MyRunnable();
+Thread myThread = new Thread(target);
+ Which of the following classes can be used to create the target, so that the preceding code 
+compiles correctly?
+ A. public class MyRunnable extends Runnable{public void run(){}}
+ B. public class MyRunnable extends Object{public void run(){}}
+ C. public class MyRunnable implements Runnable{public void run(){}}
+ D. public class MyRunnable implements Runnable{void run(){}}
+
+
+
+7
+class MyThread extends Thread { 
+ public static void main(String [] args) {
+ MyThread t = new MyThread();
+ Thread x = new Thread(t);
+ x.start();
+ } 
+ public void run() {
+ for(int i=0;i<3;++i) {
+ System.out.print(i + "..");
+ } } } 
+
+ What is the result of this code?
+ A. Compilation fails
+ B. 1..2..3..
+ C. 0..1..2..3..
+ D. 0..1..2..
+
+
