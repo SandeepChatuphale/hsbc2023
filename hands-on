@@ -1,0 +1,73 @@
+Hands-on 
+A school (your client) wants to maintain the details of students with their subjects (Make sure a student learns unique subjects).
+You have to create a simple Java application with the following functionalities for the client. 
+Build a Java application comprising three modules/layers.
+	Data Store Layer (For storing the data) 
+	Business Layer (Service Layer)
+	View Layer (For displaying report) 
+Datastore layer stores the details of Student in a single class using collection framework data structures. 
+
+Service Layer:
+Is responsible for writing business methods
+
+View Layer is responsible for displaying the report for each student on the screen as follows. 
+1)	<<Student Name>>, <Percentage>
+<<Student Name>>, <Percentage>
+2)	Percentage for a student
+
+3)	StudenetName
+-----------------------------------------------------
+<Subjects>
+Application should allow to show reports in descending and ascending order based on percentage and names.
+
+
+
+
+
+
+
+
+
+
+Each Student contains the following information:
+
+
+
+
+
+
+Student: -
+int id;
+String name;
+Address permenantAddress;//has-a
+Set<Subject> subjectsToLearn;//has-a
+Date dateOfBirth;//has-a
+
+Subject -
+String subjectName;
+int marksScored;	
+
+Implement necessary methods in Datastore layer for returning required information to the view layer as per the requirement stated in View Layer
+
+Service Layer:
+Is responsible for writing business methods
+
+View Layer is responsible for displaying the report for each student on the screen as follows. 
+4)	<<Student Name>>, <Percentage>
+<<Student Name>>, <Percentage>
+5)	Percentage for a student
+
+6)	StudenetName
+-----------------------------------------------------
+<Subjects>
+Application should allow to show reports in descending and ascending order based on percentage and names.
+
+
+Note: Ensure that your application follows
+1)	best practices (Naming conventions, comments, package structure)
+2)	implements the layered approach as described in the question
+3)	handles any runtime exceptions gracefully with appropriate message to the user
+4)	Uses of Coding to interfaces
+
+
+
