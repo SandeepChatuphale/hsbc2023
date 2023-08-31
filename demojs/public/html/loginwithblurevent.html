@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/styles.css">
+
+</head>
+<body>
+	<!-- THis is for textfield -->
+	<input type="text" name="userName" id="uName" onblur="loginUserName()">
+	<span id="usernameerror" class="error"></span>
+	<br/>
+	
+	<!-- THis is for password field -->
+	<input type="password" name="pwd" id="pwd" onblur="loginPassword()">
+	<span id="pwderror" class="error"></span>
+	<br/>
+	
+	<!-- THis is for button -->
+	<input id="btn" type="button" value="Login" onclick="showDetails()" 
+	disabled="disabled">
+	
+	<div id="output">
+		
+	</div>
+	
+	<script type="text/javascript" src="../js/validate.js">
+	
+	</script>
+	
+	
+	
+	
+	
+	
+	
+</body>
+</html>
+
+

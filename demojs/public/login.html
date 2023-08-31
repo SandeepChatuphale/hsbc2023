@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<!-- THis is for textfield -->
+	<input type="text" name="userName" id="uName">
+	<span id="usernameerror"></span>
+	<br/>
+	
+	<!-- THis is for password field -->
+	<input type="password" name="pwd" id="pwd">
+	<br/>
+	
+	<!-- THis is for button -->
+	<input type="button" value="Login" onclick="login()">
+	
+	<script type="text/javascript">
+		function login()
+		{
+			let username = document.getElementById("uName").value;
+			let pwd = document.getElementById("pwd").value;
+			
+			if(username == "")
+document.getElementById("usernameerror").innerHTML = "User name is MUST";
+			
+		}
+		
+		
+	</script>
+</body>
+</html>

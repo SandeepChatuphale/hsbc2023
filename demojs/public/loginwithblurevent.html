@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<!-- THis is for textfield -->
+	<input type="text" name="userName" id="uName" onblur="loginUserName()">
+	<span id="usernameerror"></span>
+	<br/>
+	
+	<!-- THis is for password field -->
+	<input type="password" name="pwd" id="pwd" onblur="loginPassword()">
+	<span id="pwderror"></span>
+	<br/>
+	
+	<!-- THis is for button -->
+	<input id="btn" type="button" value="Login" onclick="login()" 
+	disabled="disabled">
+	
+	<script type="text/javascript">
+		
+		function changeButtonStatus(btnStatus)
+		{
+			let loginBtn = document.getElementById("btn");			
+			loginBtn.disabled = btnStatus;
+		}
+		function loginUserName()
+		{
+			let username = document.getElementById("uName").value;
+			
+			if(username == "")
+			{
+				document.getElementById("usernameerror").innerHTML = "User name is MUST";
+				changeButtonStatus(true);
+			}
+			else
+				changeButtonStatus(false);
+		}
+		function loginPassword()
+		{
+			let pwd = document.getElementById("pwd").value;
+			
+			if(pwd == "")
+			{
+				document.getElementById("pwderror").innerHTML = "Password is MUST";
+				changeButtonStatus(true);
+			}
+			else
+				changeButtonStatus(false);
+		}		
+	</script>
+</body>
+</html>
