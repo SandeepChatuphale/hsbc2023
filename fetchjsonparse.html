@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<div id="output"></div>
+
+	<script type="text/javascript">
+		let xhr = new XMLHttpRequest();
+		
+		//this function is prcoessing after receiving response from server
+		//call to this function is NOT our responsibility
+		xhr.onload =  function()
+		{
+			//responseText is a builtin
+			let jsonBankAccountsString = xhr.responseText;
+			
+			//parse - convert json string to java script Object
+			//this we have to perform to consume data fetched from server
+			let bankaccounts = JSON.parse(jsonBankAccountsString);
+			
+let data = "<table><tr><th>Account Number</th><th>Name</th><th>Balance</th></tr>";
+			
+			for(let b of bankaccounts)
+			{
+				data += "<tr><td>" + b.accountNumber + "</td><td> " + b.holderName + "</td><td> Balance is " + b.balance + "</td></tr>";
+			}
+			
+			data += "</table>"
+			document.write(data);
+		}
+	xhr.open("GET","http://localhost:8080/test/bankaccount.json")
+	xhr.send();//this call makes request to server
+	
+	
+		
+	
+	
+	
+		
+	
+	</script>
+</body>
+</html>
