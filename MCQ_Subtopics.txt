@@ -1,0 +1,740 @@
+sub topics 
+subtopic 1 : OOP, Control Structures, Data types, Loops, Access Modifier
+
+1. What is the correct sequence of access modifiers in Java from least
+   restrictive to most restrictive?
+A. public, private, protected, default
+B. default, public, protected, private
+C. public, protected, default, private
+D. public, default, protected, private
+ANSWER: C
+
+2. Predict the output after invoking the method doTest, and select
+   the statement which is true.
+   public void doTest(int x) { 
+     int odd = 1; 
+     if(odd) /* Line 3 */
+     {
+          System.out.println("odd"); 
+     } 
+     else 
+     {
+          System.out.println("even"); 
+     } 
+   }
+A. Compilation error.
+B. "odd" will always be output.
+C. "even" will always be output.
+D. "odd" will be output for odd values of x, and "even" for even values of x.
+ANSWER: A
+
+3. Predict the output of the given code snippet and select the statement
+   which is true.
+   class While {  /* Line 1 */
+        public void loop() {
+             int x= 0;
+             while ( 1 ) { /* Line 4 */
+                 System.out.print("x plus one is " + (x + 1)); /* Line 5 */
+             }
+        }
+   }
+A. There is a syntax error on line 1.
+B. There are syntax errors on lines 1 and 4.
+C. There are syntax errors on lines 1, 4, and 5.
+D. There is a syntax error on line 4.
+ANSWER: D
+
+4.  Predict the output of the below Java code. 
+    public class Increment {
+	public static void main(String[] args) {
+		int i = 3;
+		System.out.print(++i * 2 * i++); /* Line 4 */
+		System.out.println(i); /* Line 5 */
+	}
+    }
+A. Line 4 would print 24 and Line 5 would print 4 
+B. Line 4 would print 32 and Line 5 would print 4 
+C. Line 4 would print 32 and Line 5 would print 5 
+D. Line 4 would print 24 and Line 5 would print 5 
+ANSWER: C
+
+5. Predict the output.
+   class Relational {
+       public static void main(String args[]){
+           int var1 = 5; 
+	   int var2 = 6;
+	   System.out.print(var1 > var2);
+       } 
+   }
+A. 1
+B. 0
+C. true
+D. false
+ANSWER: D
+
+6. Which of these keyword must be used to inherit a class?
+A. super
+B. this
+C. extent
+D. extends
+ANSWER: D
+
+7. Predict the output
+public class Test {
+     public static void main(String[] args) {
+          for(int i = 0 ; i < 10; i++) {			
+	  }		
+	  System.out.println(i);	
+     }	
+}
+A. 9
+B. 10
+C. Compilation Error
+D. Runtime Error
+ANSWER: C
+
+8. Predict the output
+   public class Test {	
+        public static void main(String[] args) {
+             for(int i = 0; i < 10; i++) {
+	          if(i % 2 == 0)
+		       continue;
+	          System.out.println(i);
+	     }
+        }	
+   }
+A. Code will print all even numbers between 0 to 10
+B. Code will print all odd numbers between 0 to 10
+C. Compilation Error
+D. Runtime Error
+ANSWER: B
+
+9. By using ____________, you can force immediate termination of loop, 
+bypassing the conditional expression and any remaining code in the body of the loop.
+A. switch
+B. continue
+C. break
+D. default
+ANSWER: C
+
+10. What would be the output of the following code
+    int j=50;
+    while(true) {
+         if(j<10)
+             break;
+	 j=j-10;
+    }
+    System.out.println("j is " +j);
+A. j is 0
+B. j is 50
+C. No output
+D. Program would not terminate
+ANSWER: A
+==============================================================================================================
+subtopic 2 : Overridding, overloading, Inheritence, polymorphism, constructors
+
+11. Predict the output of below Java application
+    abstract class Widget {
+         String data = "data";
+         public void useWidget() {
+         }
+    }
+    class BigWidget extends Widget{
+         String data = "big data";
+
+         public void useWidget(){
+             System.out.println(data);
+         }
+    }
+    public class WidgetUser{
+         public static void main(String[] args) {
+             Widget w = new BigWidget();
+             w.useWidget();
+         }  
+    }
+A. data
+B. big data
+C. Compilation Error
+D. Runtime Error
+ANSWER: B
+
+12. Predict the output of below Java application
+    class Base {      
+         Base() {        
+              System.out.print("Base");  
+         } 
+    }  
+    public class Alpha extends Base {      
+         public static void main(String[] args) {      
+              new Alpha(); /* Line 8 */    
+              new Base(); /* Line 9 */    
+         }  
+    }
+A. Base
+B. BaseBase
+C. Error at Line 8
+D. Error at Line 9
+ANSWER: B
+
+13. Which of these is correct way of inheriting class A by class B?
+A. class B + class A {}
+B. class B inherits class A {}
+C. class B extends A {}
+D. class B extends class A {}
+ANSWER: C
+
+14. The protected method of super class can be overriden in sub class
+    by making it public. State True or False
+A. TRUE
+B. FALSE
+ANSWER: A
+
+15. Which of the below methods can not be overriden in Java
+A. final
+B. private
+C. static
+D. All of the Above
+ANSWER: D
+
+16. Predict the output of below Java application
+    class A {
+         int i;
+	 void display() {
+	      System.out.println(i);
+	 }
+     }    
+     class B extends A {
+	 int j;
+	 void display() {
+	      System.out.println(j);
+	 }
+     }    
+     public class Inheritence {
+          public static void main(String args[])
+	  {
+	            A obj = new B();
+	            obj.i=1;
+	            obj.j=2;   
+	            obj.display();     
+	  }
+     }
+A. 1
+B. 2
+C. Compilation Error
+D. Runtime Error
+ANSWER: C
+
+17. Predict the output of below Java application
+    class A {
+         int i;
+	 void display() {
+	      System.out.println(i);
+	 }
+     }    
+     class B extends A {
+	 int j;
+	 void display() {
+	      System.out.println(j);
+	 }
+     }    
+     public class Inheritence {
+          public static void main(String args[])
+	  {
+	            B obj = new B();
+	            obj.i=1;
+	            obj.j=2;   
+	            obj.display();     
+	  }
+     }
+A. 1
+B. 2
+C. Compilation Error
+D. Runtime Error
+ANSWER: B
+
+18. Predict the output
+    class A {
+	 static void method1() {
+		System.out.println("Class A method");
+	 }
+    }
+     class B extends A {
+	 static void method1() {
+		System.out.println("Class B method");
+	 }
+     }
+     public class Test{
+	 public static void main(String[] args) {
+		A a = new B();
+		a.method1();
+	 }
+     }
+A. Class A method
+B. Class B method
+C. Compilation Error
+D. Runtime Error
+ANSWER: A
+
+19. Method signature in Java consists of
+A. Method Name, Return Type and Number Of Arguments
+B. Access Modifier, Method Name and Types Of Arguments
+C. Method Name, Number Of Arguments, Types Of Arguments and Order Of Arguments
+D. Return Type, Access Modifier and Order Of Arguments
+ANSWER: C
+
+20. Method Overriding shows static polymorphism. True or false?
+A. TRUE
+B. FALSE
+ANSWER: B
+
+21. Predict the output of the below code.
+    class Parent {
+         void method(int a) {
+              System.out.println("ONE");
+         }
+         void method(double d) {
+              System.out.println("TWO");
+         }
+    }
+
+    class Child extends Parent {
+         @Override
+         void method(double d) {
+              System.out.println("THREE");
+         }
+    }
+ 
+    public class Main {   
+         public static void main(String[] args) {
+              new Child().method(100);
+         }
+    }
+A. ONE
+B. TWO
+C. THREE
+D. None of the above
+ANSWER: A
+
+22. Choose an appropriate option from below for the Constructors in Java
+A.  Constructors can be only public
+B.  Constructors can be public and protected but not private
+C.  Constructors can be either public or default but not protected and private
+D.  Constructors can be public, protected, default and also private
+ANSWER: D
+================================================================================================================
+
+subtopic 3 : Exception Handling, collection framework
+23. Predict the output of the Java code given below
+
+    class MyResource {
+	public void close() {
+		System.out.println("Close in close");
+	}
+    }
+    class Demo {
+	public static void main(String[] arg) {
+	     try(MyResource s = new MyResource()) {
+	          throw new Exception();
+	     }catch(Exception e) {
+		  System.out.println("Close in catch");
+	}
+    }
+A. Close in close
+   Close in catch
+B. Close in catch
+   Close in close
+C. Compilation Error as MyResource does not extend Exception class
+D. Compilation Error as MyResource does not implement AutoCloseable
+ANSWER: D
+
+24. In Java, which class needs to be extend from to create a Custom Exception 
+    which would be under the category of "Checked" Exception.
+A.  RuntimeException
+B.  Error
+C.  Exception
+D.  CheckedException
+ANSWER: C
+
+25. Predict the output of the below Java code.
+    public class Car {
+         public void start() {
+	      try {
+                   System.out.println("Starting up");
+                   throw new Exception();
+              }
+              catch(Exception e) {
+		   System.out.println("Problem occurred");
+                   System.exit(0);
+              }
+              finally {
+          	   System.out.println("Lets walk");
+              }
+         } 
+         public static void main(String arg[]) {
+	     new Car().start();	  
+         }  
+    }
+A. Starting up.
+B. Starting up
+   Problem occurred
+C. Starting up
+   Problem occurred
+   Lets walk
+D. Runtime Error
+ANSWER: B
+
+26. Which of these keywords is not a part of exception handling in Java ?
+A. throw
+B. throws
+C. thrown
+D. finally
+ANSWER: C
+
+27. Predict the output of the below Java code.
+    public class Test{
+         public static void main(String[] args){
+	      try {
+	           int x=0;
+		   int y=50/x;
+		   System.out.print("Division by zero ");
+	      }
+	      catch(ArithmeticException e) {
+			System.out.print("Exception is caught ");
+	      }
+         }
+    }
+A. Division by Zero
+B. Division by zero Exception is caught
+C. Exception is caught
+D. No output as finally block is missing
+ANSWER: C
+
+28. What would be the result of the given code snippet ?
+    //required code is present
+    try {
+         method();
+    }
+    catch(RuntimeException e) {  /* catch block 1 */
+         e.printStackTrace();
+    }
+    catch(Exception e) {  /* catch block 2 */
+         e.printStackTrace();
+    }
+    catch(IOException e) { /* catch block 3 */
+         e.printStackTrace();
+    }
+    //required code is present
+A. Compilation Error as multiple catch blocks not allowed
+B. Compilation Error due to sequence of catch block 1 and catch block 2
+C. Compilation Error due to sequence of catch block 2 and catch block 3
+D. Compilation Error as "Checked" Exception and "Unchecked" Exception cant be handled together
+ANSWER: C
+
+29. What type of Exceptions can be ignored at compile time?
+A. Runtime
+B. Checked
+C. Both
+D. None
+ANSWER: A
+
+30. Which of the following interface is suitable for a class that stores associations of keys to values?
+A. Set
+B. SortedSet
+C. Map
+D. List
+ANSWER: C
+
+31. Choose the correct declaration for stateCitiesMap in the code snippet below,
+    so that there will not be any compilation error
+
+//Insert line of code here
+
+List<String> cities = new ArrayList<>();
+cities.add("Pune");
+cities.add("Mumbai");
+stateCitiesMap.put("MH", cities);
+
+A. Map<String, List<String>> stateCitiesMap = new HashMap<String, ArrayList<String>>();
+B. Map<String, List<String>> stateCitiesMap = new HashMap<String, List<String>>();
+C. Map<String, ArrayList<String>> stateCitiesMap = new HashMap<String, List<String>>();
+D. All of the Above
+ANSWER: B
+
+32. What would be the output of the code given below ?
+Assume all required classes and interfaces are imported.
+
+public class Test {
+	public static void main(String[] args) {
+		ArrayList<Integer> list = new ArrayList<>();
+		list.add(20);
+		list.add(10);
+		list.add(50);
+		Collections.sort(list);
+		list.add(15);
+		System.out.println(list);
+	}
+}
+
+A. [10, 20, 50, 15]
+B. [15, 10, 20, 50]
+C. [10, 15, 20, 50]
+D. [20, 15, 10, 50]
+ANSWER: A
+
+33. Which of the following collections are synchronized by nature ?
+A. ArrayList
+B. LinkedList
+C. SynchronizedList
+D. Vector
+ANSWER: D
+
+34. What would be the output of the Java code given below ?
+class Demo {
+	public static void main(String[] args) {
+		HashMap<Integer, String> map = new HashMap<>();
+		map.put(1, "A");
+		map.put(1, "B");
+		System.out.println(map.get(1));
+	}
+}
+A. A 
+B. B
+C. Compilation error as duplicates keys not allowed in Map
+D. A B
+ANSWER: B
+
+35. Predict the output of below Java Code.
+public class Test {
+	public static void main(String[] args) {
+		Set<Person> persons = new HashSet<Person>();
+		persons.add(new Person(13));
+		persons.add(new Person(33));
+		persons.add(new Person(21));
+		persons.add(new Person(21)); 
+		System.out.print(persons.size()+" ");
+		System.out.print(persons);
+	}
+}
+
+class Person implements Comparable<Person> {
+	Integer age;
+	public Person(int age) {
+		this.age = age;
+	}
+	public int compareTo(Person p) {
+		return p.age.compareTo(this.age);
+	}
+		public String toString() {
+		return ""+ this.age;
+	}
+}
+A. 3 [13, 21, 33]
+B. 4 [33, 21, 21, 13]
+C. Compilation Error as duplicates are not allowed in HashSet
+D. Runtime Error as duplicates are not allowed in HashSet
+ANSWER: B
+
+36. Which of these packages contain all the collection classes in Java ?
+A. java.lang
+B. java.util
+C. java.awt
+D. java.net
+ANSWER: B
+===============================================================================================================
+
+subtopic 4 : File IO, multithreading
+
+38. Which of these classes defined in java.io and used in File handling are Abstract ?
+1.InputStream 2.PrintStream 3.Reader 4.FileInputStream
+
+A. only 1
+B. only 2
+C. 1 and 3
+D. 1 and 4
+ANSWER: C
+
+39. Which of these class is used to read characters in a file ?
+A. FileReader
+B. FileWriter
+C. FileInputStream
+D. CharacterReader
+ANSWER: A
+
+40. Which of these is a method to clear all the data present in output buffer?
+A. clears()
+B. flush()
+C. buffer()
+D. close()
+ANSWER: B
+
+41. Predict the correct sequence of output after executing the below Java application
+public class MyThread implements Runnable {
+   String msg = "default";
+   public MyThread(String s) {
+      this.msg = s;
+   }
+   public void run() {
+      System.out.println(msg);
+   }
+   public static void main(String args[]) {
+      new Thread(new MyThread("String1")).run();
+      new Thread(new MyThread("String2")).run();
+      System.out.println("end");
+   }
+}
+A. The program will print only "end"
+B. The program would always print in the order - String1 String2 end
+C. The program would print String 1 and String 2 in random order followed by end
+D. No specific order is guaranteed.
+ANSWER: B
+
+42. Which of the following statements are true regarding synchronization ?
+A. Making a synchronized method recursive will cause a deadlock
+B. Only non-static member variables are accessible in a synchronized method.
+C. A synchronized method cannot be executed simultaneously by more than one thread on the same object.
+D. A synchronized method cannot call a non-synchronized method in its body.
+ANSWER: C
+
+43. In Java, a thread can be created by 
+A. Extending the Thread class
+B. Implementing the Runnable interface
+C. Both of the Above
+D. None of these
+ANSWER: C
+
+44. Predict the correct output of below Java code
+    public class Test implements Runnable{
+         public static void main(String args[]) {
+	      Thread t = new Thread(new Test());
+	      t.start();
+	      System.out.println("This is main thread");
+	 }
+	 @Override
+	 public void run() {
+		System.out.println("Thread has started");
+	 }
+    }
+
+A. This is main thread
+   Thread has started
+B. Thread has started
+   This is main thread
+C. No specific order is guaranteed
+D. None of the Above
+ANSWER: C
+
+45. Predict the correct output of below Java code
+    public class Test extends Thread{
+         public static void main(String args[]) {
+	      Test t = new Test();
+	      t.run();
+	      t.start();
+	 }
+	 @Override
+	 public void run() {
+	      System.out.println("running");
+	 }
+    }
+A. running
+   running
+B. running
+C. Compilation Error
+D. Runtime Error
+ANSWER: A
+
+46. Predict the correct sequence of output in below multi-threaded Java program
+public class Test implements Runnable {
+     public static void main(String args[]) throws InterruptedException {
+          Thread a = new Thread(new Test());
+	  System.out.println("Start");
+	  a.start();
+	  a.join();
+	  System.out.println("Finish");
+     }
+     @Override
+     public void run() {
+		System.out.println("running");
+     }
+}
+
+A. Compilation Error
+B. Runtime Error
+C. Start Finish running
+D. Start running Finish
+ANSWER: D
+==================================================================================================================
+
+subtopic 5 : JDBC API, java 8
+
+47. Which statement/s is/are true?
+    a. PreparedStatement is precompiled
+    b. PreparedStatement boosts performance of the application
+    c. PreparedStatement is used for parameterized query
+
+A. a and b
+B. b and c
+C. a, b and c
+D. a and c
+ANSWER: C
+
+48. Rearrange the following steps in proper order to connect to the database using JDBC API
+    1)	Create connection using database url.
+    2)	Load and register the driver.
+    3)	Fire the query.
+    4)	Create statement.
+    5)	Close connection.
+
+A. 1-2-3-4-5
+B. 2-1-4-3-5
+C. 2-4-1-3-5
+D. 1-4-2-3-5
+ANSWER: B
+
+49. Which statement below is valid ?
+    a)	Class.forName() is used to get connection object.
+    b)	ResultSet always points to last row.
+    c)	DriverManager is responsible for loading and registering the driver
+
+A. a
+B. b
+C. c
+D. All the above
+ANSWER: C
+
+50. Assume the table Employee in database as below.	
+    Id	name  Address
+    1	John  Mumbai
+    Connectivity to the database is properly done.
+    Statement statement = connection.createStatement();
+    ResultSet rs = statement.executeQuery(“select address from Employee”);
+    rs.next();
+    Which statement will give address value?
+
+A. rs.getString(3)
+B. rs.getString(1)
+C. rs.getString(2)
+D. rs.getString(0)
+ANSWER: B
+
+51. Lambda expressions in java 8 are based on
+A. Procedural Programming
+B. Functional Programming
+C. Data Programming
+D. All of the Above.
+ANSWER: B
+
+52. Maximum how many abstract methods are possible to define in Functional Interface of Java 8?
+A. 1
+B. 2
+C. 3
+D. Any no of methods
+ANSWER: A
+
+
+53) Which is correct lambda?
+a) Runnable r = () -> System.out.println();
+b) Runnable r = () -> {System.out.println()};
+c) Runnable r = () -> 9;
+d) none of the above
+
+Answer: - a
