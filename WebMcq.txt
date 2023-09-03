@@ -1,0 +1,111 @@
+
+1) Which of the following keywords is used to define a variable in Javascript?
+
+a) var
+b) let
+c) both a,b
+d) None of the above
+
+Answer:- c
+
+2) Which of the following methods is used to access HTML elements using Javascript?
+a) getElementById()
+b) getElementsByClassName()
+c) both a,b
+d) None of the above
+
+Answer : c
+
+3) How can a datatype be declared to be a constant type?
+a) var
+b) let
+c) const
+d) constant
+
+Answer:- c
+
+
+4) What will be the output of the following code snippet?
+<script type="text/javascript">
+a = 5 + "9";
+document.write(a);
+</script>
+
+a) Error
+b) 14
+c) 9
+d) 58
+
+Answer: - d
+
+
+5) What will be the output of the following code snippet?
+	<script type="text/javascript">
+	let arr = [10,40,56];
+	document.write(arr[-1]);
+	</script>
+
+a) Error
+b) undefined
+c) null
+d) None of the above
+
+Answer: - b
+
+
+6) CSS stands for
+a) Cascading Style sheets
+b) Color and style sheets
+c) Combination style sheets
+d) None of the above
+
+Answer:- a
+
+7) In how many ways can CSS be written in?
+a) 1
+b) 2
+c) 3
+d) 4
+
+Answer: - 3
+
+
+8)  
+What type of CSS is generally recommended for designing large web pages?
+a) Inline
+b) Internal
+c) External
+d) none of the above
+
+Answer: - c
+
+
+9) Which HTML tag is used to declare internal CSS?
+a) <style> 
+b) <link>
+c) <script>
+d) None of the above
+
+Answer: - a
+
+
+
+10) Which HTML tag is used to declare internal CSS?
+a) <style> 
+b) <link>
+c) <script>
+d) None of the above
+
+Answer: - b
+
+
+11)  How can we select an element with a specific ID in CSS?
+a) #
+b) .
+c) &
+d) None of the above
+
+Answer: - #
+
+
+
