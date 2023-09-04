@@ -1,0 +1,183 @@
+ Given: 
+1. class TestA { 
+2. public void start() { System.out.println(”TestA”); } 
+3. } 
+4. public class TestB extends TestA { 
+5. public void start() { System.out.println(”TestB”); } 
+6. public static void main(String[] args) { 
+7. ((TestA)new TestB()).start(); 
+8. } 
+9. } 
+What is the result? 
+A. TestA 
+B. TestB 
+C. Compilation fails. 
+D. An exception is thrown at runtime. 
+Answer: B
+
+
+ Given: 
+10. abstract public class Employee { 
+11. protected abstract double getSalesAmount(); 
+12. public double getCommision() { 
+13. return getSalesAmount() * 0.15; 
+14. } 
+15. } 
+16. class Sales extends Employee { 
+17. // insert method here 
+18. } 
+Which two methods, inserted independently at line 17, correctly 
+complete the Sales class? (Choose two.) 
+A. double getSalesAmount() { return 1230.45; } 
+B. public double getSalesAmount() { return 1230.45; } 
+C. private double getSalesAmount() { return 1230.45; } 
+D. protected double getSalesAmount() { return 1230.45; }
+
+Answer: - B,D
+
+
+3)
+1. public class Test { 
+2. int x= 12; 
+3. public void method(int x) { 
+4. x+=x; 
+5. System.out.println(x); 
+6. } 
+7. } 
+Given: 
+34. Test t = new Test(); 
+35. t.method(5); 
+What is the output from line 5 of the Test class? 
+A. 5 
+B. 10 
+C. 12 
+D. 17 
+E. 24 
+Answer: B
+
+
+4)
+Given: 
+25.intx=12; 
+26. while (x < 10) { 
+27. x--; 
+28. } 
+29. System.out.print(x); 
+
+What is the result? 
+A. 0 
+B. 10 
+C. 12 
+D. Line 29 will never be reached. 
+Answer: C 
+
+
+5)
+SomeException: 
+1. public class SomeException { 
+2. } 
+Class A: 
+1. public class A { 
+2. public void doSomething() { } 
+3. } 
+Class B: 
+1. public class B extends A { 
+2. public void doSomething() throws SomeException { } 
+3. } 
+Which is true about the two classes? 
+A. Compilation of both classes will fail. 
+B. Compilation of both classes will succeed. 
+C. Compilation of class A will fail. Compilation of class B will succeed. 
+D. Compilation of class B will fail. Compilation of class A will succeed. 
+Answer: D 
+
+
+6)
+ Given: 
+11. class A { 
+12. void process() throws Exception { throw new Exception(); } 
+13. } 
+14. class B extends A { 
+15. void process() { System.out.println(”B”); } 
+16. } 
+17. public static void main(String[] args) { 
+18. new B().process();
+ 19. } 
+What is the result? 
+A. B 
+B. The code runs with no output. 
+C. Compilation fails because of an error in line 12. 
+D. Compilation fails because of an error in line 15. 
+E. Compilation fails because of an error in line 18. 
+Answer: A 
+
+
+7)
+ Given: 
+1. public class Threads3 implements Runnable { 
+2. public void run() { 
+3. System.out.print(”running”); 
+4. } 
+5. public static void main(String[] args) { 
+6. Thread t = new Thread(new Threads3()); 
+7. t.run(); 
+8. t.run(); 
+9. t.start(); 
+10. } 
+11. } 
+What is the result? 
+A. Compilation fails. 
+B. An exception is thrown at runtime. 
+C. The code executes and prints “running”. 
+D. The code executes and prints “runningrunning”. 
+E. The code executes and prints “runningrunningrunning”. 
+Answer: E
+
+
+8)
+Given: 
+1. public class Threads4 { 
+2. public static void main (String[] args) { 
+3. new Threads4().go();
+ 4. } 
+5. public void go() { 
+6. Runnable r = new Runnable() { 
+7. public void run() { 
+8. System.out.print(”foo”); 
+9. } 
+10. }; 
+11. Thread t = new Thread(r); 
+12. t.start(); 
+13. t.start(); 
+14. } 
+15. } 
+What is the result? 
+A. Compilation fails. 
+B. An exception is thrown at runtime. 
+C. The code executes normally and prints ‘foo”. 
+D. The code executes normally, but nothing is printed. 
+Answer: B
+
+
+9)
+ Given: 
+10. abstract class A { 
+11. abstract void al(); 
+12. void a2() { } 
+13. } 
+14. class B extends A { 
+15. void a1() { } 
+16. void a2() { } 
+17. } 
+18. class C extends B { void c1() { } } 
+and: 
+A x = new B(); C y = new C(); A z = new C(); 
+Which four are valid examples of polymorphic method calls? (Choose 
+four.) 
+A. x.a2(); 
+B. z.a2(); 
+C. z.c1(); 
+D. z.a1(); 
+E. y.c1(); 
+F. x.a1(); 
+Answer: ABDF 
