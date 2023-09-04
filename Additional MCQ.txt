@@ -75,7 +75,6 @@ Answer: C,D
     catch (Exception e) { s += "c"; }
   }
   void s2() throws Exception  {
-402 Chapter 5:  Flow Control, Exceptions, and Assertions
     s3();  s += "2";
     s3();  s += "2b";
   }
@@ -93,7 +92,7 @@ B. -c
  G. -2c2bc
  H. Compilation fails
 
-Answer:- C
+Answer:- B
  
  5. 
 Given:
