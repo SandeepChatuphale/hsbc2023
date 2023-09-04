@@ -1,0 +1,240 @@
+1) Which statements are true about comparing two instances of the same class, given that the 
+equals() and hashCode() methods have been properly overridden? (Choose all that apply.)
+ A. If the equals() method returns true, the hashCode() comparison == might return false
+ B. If the equals() method returns false, the hashCode() comparison == might return true
+ C. If the hashCode() comparison == returns true, the equals() method must return true
+ D. If the hashCode() comparison == returns true, the equals() method might return true
+ E. If the hashCode() comparison != returns true, the equals() method might return true
+
+Answer :- B,D
+
+
+2) 
+Given:
+ public static void before() {
+  Set set = new TreeSet();
+  set.add("2");
+  set.add(3);
+  set.add("1");
+  Iterator it = set.iterator();
+    while (it.hasNext())
+  System.out.print(it.next() + " ");
+ }
+ Which statements are true?
+ A. The before() method will print 1 2
+ B. The before() method will print 1 2 3
+ C. The before() method will print three numbers, but the order cannot be determined
+ D. The before() method will not compile
+ E. The before() method will throw an exception at runtime
+
+
+Answer: - E
+
+
+3) Given:
+ import java.util.*;
+ class MapEQ {
+  public static void main(String[] args) {
+    Map<ToDos, String> m = new HashMap<ToDos, String>();
+    ToDos t1 = new ToDos("Monday");
+    ToDos t2 = new ToDos("Monday");
+    ToDos t3 = new ToDos("Tuesday");
+    m.put(t1, "doLaundry");
+    m.put(t2, "payBills");
+    m.put(t3, "cleanAttic");
+    System.out.println(m.size());
+ } }
+ class ToDos{
+  String day;
+  ToDos(String d) { day = d; }
+  public boolean equals(Object o) {
+    return ((ToDos)o).day == this.day;
+  }
+  // public int hashCode() { return 9; }
+ }
+ Which is correct? (Choose all that apply.)
+ A. As the code stands it will not compile
+ B. As the code stands the output will be 2
+ C. As the code stands the output will be 3
+ D. If the hashCode() method is uncommented the output will be 2
+ E. If the hashCode() method is uncommented the output will be 3
+ F. If the hashCode() method is uncommented the code will not compile
+
+Answer: C,D
+
+4)
+ Given:
+ class Plane {
+  static String s = "-";
+  public static void main(String[] args) {
+    new Plane().s1();
+    System.out.println(s);
+  }
+  void s1() {
+    try { s2(); }
+    catch (Exception e) { s += "c"; }
+  }
+  void s2() throws Exception  {
+402 Chapter 5:  Flow Control, Exceptions, and Assertions
+    s3();  s += "2";
+    s3();  s += "2b";
+  }
+  void s3() throws Exception {
+    throw new Exception();
+  }
+ }
+ What is the result?
+ A. 
+B. -c
+ C. -c2
+ D. -2c
+ E. -c22b
+ F. -2c2b
+ G. -2c2bc
+ H. Compilation fails
+
+Answer:- C
+ 
+ 5. 
+Given:
+ try { int x = Integer.parseInt("two"); }
+ Which could be used to create an appropriate catch block? (Choose all that apply)
+
+ Which could be used to create an appropriate catch block? (Choose all that apply.)
+ A. ClassCastException
+ B. IllegalStateException
+ C. NumberFormatException
+ D. IllegalArgumentException
+ E. ExceptionInInitializerError
+ F. ArrayIndexOutOfBoundsException
+
+Answer: - C,D
+
+6) 
+ 
+Given:
+ 1. class Loopy {
+ 2.   public static void main(String[] args) {
+ 3.     int[] x = {7,6,5,4,3,2,1};
+ 4.     // insert code here 
+5.       System.out.print(y + " ");
+ 6.     }
+ 7. } }
+ Which, inserted independently at line 4, compiles? (Choose all that apply.)
+ A. for(int y : x) {
+ B. for(x : int y) {
+ C. int y = 0; for(y : x) {
+ D. for(int y=0, z=0; z<x.length; z++) { y = x[z]; 
+E. for(int y=0, int z=0; z<x.length; z++) { y = x[z]; 
+F. int y = 0; for(int z=0; z<x.length; z++) { y = x[z];
+
+Answer: - A,D,F
+
+7) 
+Given:
+ 3. class SubException extends Exception { }
+ 4. class SubSubException extends SubException { }
+ 5. 
+ 6. public class CC { void doStuff() throws SubException { } }
+ 7.
+ 8. class CC2 extends CC { void doStuff() throws SubSubException { } }
+ 9.
+ 10. class CC3 extends CC { void doStuff() throws Exception { } }
+ 11.
+ 12. class CC4 extends CC { void doStuff(int x) throws Exception { } }
+ 13.
+ 14. class CC5 extends CC {  void doStuff()  { } }
+ What is the result? (Choose all that apply.)
+ A. Compilation succeeds
+ B. Compilation fails due to an error on line 8
+ C. Compilation fails due to an error on line 10
+ D. Compilation fails due to an error on line 12
+ E. Compilation fails due to an error on line 14
+
+Answer:- C
+
+8)
+ Given:
+ public abstract interface Frobnicate { public void twiddle(String s); }
+ Which is a correct class?  (Choose all that apply.)
+ A. public abstract class Frob implements Frobnicate { 
+      public abstract void twiddle(String s) { }
+    }
+ B.  public abstract class Frob implements Frobnicate { }
+ C.  public class Frob extends Frobnicate {
+      public void twiddle(Integer i) { }
+    }
+ D.  public class Frob implements Frobnicate {
+      public void twiddle(Integer i) { }
+    }
+ E.  public class Frob implements Frobnicate {
+      public void twiddle(String i) { }
+      public void twiddle(Integer s) { }
+    }
+
+Answer: - B
+
+
+9)
+Given:
+ class Top {
+  public Top(String s) { System.out.print("B"); }
+ }
+ public class Bottom2 extends Top {
+  public Bottom2(String s) { System.out.print("D"); }
+  public static void main(String [] args) {
+    new Bottom2("C");
+    System.out.println(" ");
+ } }
+ What is the result?
+ A. BD 
+B. DB 
+C. BDC
+ D. DBC
+ E. Compilation fails
+
+Answer: - E
+
+
+10)
+Given:
+ class Clidder {
+  private final void flipper() { System.out.println("Clidder"); }
+ }
+ public class Clidlet extends Clidder {
+  public final void flipper() { System.out.println("Clidlet");  }
+  public static void main(String [] args) { 
+    new Clidlet().flipper(); 
+} }
+ What is the result?
+ A. Clidlet 
+B. Clidder 
+C.  Clidder
+ Clidlet
+ D.  Clidlet
+ Clidder 
+E. Compilation fails
+
+Answer: - A
+
+
+11)
+Which one of the following abstract methods does not take any argument but returns a value?
+A. The accept() method in java.util.function.Consumer interface 
+
+B. The get() method in java.util.function.Supplier interface 
+
+C. The test() method in java.util.function.Predicate interface 
+
+D. The apply() method in java.util.function.Function interface
+
+Answer: - B
+
+
+12) IN which package functional interaces are present?
+A) java.lang
+B) java.util
+C) java.util.function
+D) java.io
+
+Answer: C
