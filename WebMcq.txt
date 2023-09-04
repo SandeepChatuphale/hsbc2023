@@ -34,7 +34,7 @@ document.write(a);
 a) Error
 b) 14
 c) 9
-d) 58
+d) 59
 
 Answer: - d
 
@@ -90,7 +90,7 @@ Answer: - a
 
 
 
-10) Which HTML tag is used to declare internal CSS?
+10) Which HTML tag is used to declare external CSS?
 a) <style> 
 b) <link>
 c) <script>
