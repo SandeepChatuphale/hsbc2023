@@ -461,6 +461,6 @@ Answer: - a
 	    uses fullyqualifiedinterfaceName;
 
 	e) requires moduleName;
-	    provides fullyqualifiedclassnameName;
+	    provides fullyqualifiedinterfaceName with fullyqualifiedclassnameName;
 
 Answer: - b
