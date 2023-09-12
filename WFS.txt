@@ -411,3 +411,34 @@ c) In m2()
 d) None of the above
 
 Answer: - a
+
+30)
+what is the O/p?
+
+interface I1
+{
+	void m1();
+}
+
+interface I2 implements I1
+{
+	void m2();
+}
+
+public class Demo implements I2 {
+
+	public void m2(){
+		System.out.println("In m2()");
+	}
+	public static void main(String[] args) {
+		Demo d = new Demo();
+		d.m2();		
+	}	 
+}
+
+a) compilation error
+b) Exception
+c) In m2()
+d) None of the above
+
+Answer: - a
