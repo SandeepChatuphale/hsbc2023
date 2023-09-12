@@ -442,3 +442,25 @@ c) In m2()
 d) None of the above
 
 Answer: - a
+
+
+31)
+	
+	which of the following is NOT valid combination?
+	
+	a) exports package
+	    requires moduleName
+	
+	b) exports moduleName
+	    requires moduleName
+
+	c) opens package
+	    requires moduleName
+	
+	d) requires moduleName
+	    uses fullyqualifiedinterfaceName;
+
+	e) requires moduleName;
+	    provides fullyqualifiedinterfaceName;
+
+Answer: - b
