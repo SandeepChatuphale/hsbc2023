@@ -484,7 +484,7 @@ b) false
 Answer: - a
 
 
-33) Which of the follwoing is NOT valid advice type.
+34) Which of the follwoing is NOT valid advice type.
 a) Before
 b) After
 c) Around
