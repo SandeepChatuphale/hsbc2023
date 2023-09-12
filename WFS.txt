@@ -491,3 +491,18 @@ c) Around
 d) AfterReturning
 e) AfterThrowing
 f) none of the above
+
+Answer: - f
+
+35) Using ApplicationContext singleton Spring Beans are loaded lazily?
+a) true
+b) false
+
+Answer: - b
+
+
+36) Using ApplicationContext prototype Spring Beans are loaded lazily?
+a) true
+b) false
+
+Answer: - a
