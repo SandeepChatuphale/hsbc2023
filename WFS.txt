@@ -101,7 +101,7 @@ b) Template Design pattern
 c) Singleton design pattern
 d) Decorator design pattern
 
-Answer: a
+Answer: b
 
 
 13) @RestController annotation is a combination of the below two annotations
