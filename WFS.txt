@@ -542,7 +542,7 @@ d) none of the above
 Answer: - a
 
 
-42) Which of the following is NOT used to for consuming Rest Webservice
+41) Which of the following is NOT used for consuming Rest Webservice
 a) RestTemplate
 b) HttpClient
 c) HttpURLConnection
@@ -551,7 +551,7 @@ d) None of the above
 Answer: - d
 
 
-43) Which of the following is given by Spring used  for consuming Rest Webservice
+42) Which of the following is given by Spring used  for consuming Rest Webservice
 a) RestTemplate
 b) HttpClient
 c) HttpURLConnection
