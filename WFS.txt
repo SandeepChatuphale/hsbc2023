@@ -535,8 +535,8 @@ Answer: - a
 
 40) Which property used to mention eureka server
 a) eureka.client.service-url.defaultZone=http://localhost:8761/eureka
-a) eureka.client.defaultZone=http://localhost:8761/eureka
-a) eureka.service-url.defaultZone=http://localhost:8761/eureka
-a) none of the above
+b) eureka.client.defaultZone=http://localhost:8761/eureka
+c) eureka.service-url.defaultZone=http://localhost:8761/eureka
+d) none of the above
 
 Answer: - a
