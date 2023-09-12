@@ -524,7 +524,7 @@ d) @EurekaEnableSrrver
 Answer: - a
 
 
-39) Annotation used to enable Eureka Server is
+39) Annotation used to enable Eureka Client is
 a) @EnableEurekaClient
 b) @EnableClient
 c) @Client
