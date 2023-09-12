@@ -1,0 +1,413 @@
+
+1) What is the purpose of the filter() operation in the Stream API? 
+a) To transform elements by applying a function. 
+b) To remove duplicate elements from the stream. 
+c) To perform an action on each element of the stream. 
+d) To filter elements based on a condition
+
+Answer: - d
+
+
+2) Which of the following is a terminal operation in the Stream API? 
+a) map() 
+b) collect() 
+c) filter() 
+d) distinct() 
+
+Answer: - b
+
+3) What is the purpose of the map() operation in the Stream API? 
+a) To perform an action on each element of the stream. 
+b) To remove duplicate elements from the stream. 
+c) To transform elements by applying a function. 
+d) To filter elements based on a condition. 
+
+Answer: - c
+
+
+
+4) What is the output of the following Stream operation? 
+Stream.of(1, 2, 3, 4).map(i -> i * 2).collect(Collectors.toList())
+
+a) [1, 2, 3, 4] 
+b) [2, 4, 6, 8] 
+c) [2, 3, 4, 5] 
+d) [1, 3, 5, 7]
+
+Answer: - [2, 4, 6, 8] 
+
+
+5) What is the default scope of the Spring Bean?
+a) singleton
+b) prototype
+c) request
+d) session
+
+Answer: - a
+
+
+6) Different ways to configure Spring-based applications?
+a) XML based configuration
+b) Java-based configuration
+c) Annotation based configuration
+d) All of the above
+
+Answer: - d
+
+7)  What is the purpose of the Spring IoC container? 
+a) To manage the lifecycle of beans and their dependencies 
+b) To handle the configuration of the application 
+c) To provide a caching mechanism for the application 
+d) To provide a security mechanism for the application
+
+Answer: - a
+
+8) What are Spring stereotype annotations?
+a) @Service
+b) @Controller
+c) @Repository
+d) @Component
+e) All of the above
+
+Answer: - e
+
+9) What is the scope to create a new instance every time the bean is requested from the spring container?
+a) singleton
+b) prototype
+c) request
+d) session
+
+Answer:- b
+
+10) Which is the front controller in Spring MVC?
+a) DispatcherServlet
+b) FrontDispatcherServlet
+c) FrontControllerService
+d) None of the above
+
+Answer: a
+
+11) Which Spring Framework module is used to implement cross-cutting concerns in Spring based-applications?
+a) ORM
+b) AOP
+c) JDBC
+d) None of the above
+
+Answer: - b
+
+12) JdbcTemplate implements the below design pattern?
+a) Strategy design pattern
+b) Template Design pattern
+c) Singleton design pattern
+d) Decorator design pattern
+
+Answer: a
+
+
+13) @RestController annotation is a combination of the below two annotations
+a) @Component and @ResponseBody annotations
+b) @Controller and @ResponseBody annotations
+c) @Service and @ResponseBody annotations
+d) None of the above
+
+Answer: - b
+
+
+14) Which Spring annotation is used to inject the Spring bean?
+a) @Bean
+b) @Autowired
+c) @Service
+d) @Component
+
+Answer: - b
+
+15) Which Spring annotation is used to extract the URI template variable value?
+a) @PathVariable
+b) @ParamRequest
+c) @ModelAttribute
+d) @RequestMapping
+
+Answer: - a
+
+
+16) The newly introduced Streams API is available in which package of java 8:
+
+a) java.io.streams
+b) java.io.stream
+c) java.util.streams
+d) java.util.stream
+
+Answer: - d
+
+
+17) Stream operations in java 8 can be divided into
+
+a) Terminal types
+b) Intermediate types
+c) All
+d) None
+
+Answer: - c
+
+
+
+18) List<String> words = Arrays.asList("Peris", "London", "New York", "Sydney", "Washington");
+String result = words.stream()
+                     .filter(w -> w.length() > 10)
+                     .findFirst()
+                     .orElse("none");
+System.out.println(result);
+
+(a) none
+
+(b) Washington
+
+(c) New York
+
+(d) An error is thrown
+
+Answer: - a
+
+
+19)  List<String> list = Arrays.asList("banana", "apple", "cherry");
+	  list.stream()
+	      .sorted((s1, s2) -> s1.compareTo(s2))
+	      .forEach(System.out::println);
+
+(a) apple, banana, cherry 
+
+(b) cherry, banana, apple 
+
+(c) banana, apple, cherry 
+
+(d) apple, cherry, banana
+
+Answer: - a
+
+
+20) List<Integer> list = Arrays.asList(1, 15, 3, 10, 27);
+	int sum = list.stream()
+		   .filter(i -> i % 3 == 0)
+		   .mapToInt(Integer::intValue)
+		.sum();
+	System.out.println(sum);
+
+
+(a) 18
+
+(b) 45
+
+(c) 30
+
+(d) 56
+
+
+Answer: - b
+
+
+
+21) Which is the mandatory condition to define a functional interface in Java 8?
+
+(a) The interface MUST have @functionalInterface annotation on top of it
+
+(b) The interface MUST have only one method
+
+(c) The interface MUST have only one abstract method
+
+(d) The interface MUST at least have one method 
+
+Answer: - c
+
+
+22) Stream<Integer> stream = Stream.of(1, 2, 3, 4, 5); 
+stream.reduce((a, b) -> a + b)
+      .ifPresent(System.out::println);
+
+a) 15
+b) 10
+c) 6
+d) 5
+
+Answer: - a
+
+
+
+23) Stream<String> stream = Stream.of("hello", "world", "java");
+ stream.filter(s -> s.contains("o")) 
+       .map(String::toUpperCase)
+       .forEach(System.out::print);
+
+(a) HELLO WORLD JAVA 
+
+(b) hello world java 
+
+(c) HELLOWORLD 
+
+(d) HELLO WORLD
+
+
+Answer: - c
+
+
+
+24)
+What is the method reference feature in Java 8?
+
+(a) A way to create a new object using a constructor reference 
+
+(b) A way to call a static method using a method reference 
+
+(c) A way to call an instance method using a method reference
+
+(d) All of the above
+
+Answer: d
+
+
+
+
+25)  what is the O/p?
+
+interface I1
+{
+	default void m1()
+	{
+		System.out.println("In I1()");
+	}
+}
+
+interface I2
+{
+	default void m1()
+	{
+		System.out.println("In I2()");
+	}
+}
+
+public class Demo implements I1,I2 {
+
+	public static void main(String[] args) {
+		Demo d = new Demo();
+		d.m1();		
+	}	 
+}
+
+a) compilation error (class Demo inherits unrelated defaults for m1() from types I1 and I2 public class Demo implements I1,I2 {)
+b) no O/P
+c) In I1 
+    In I2
+d) none of the above
+
+
+Answer: - a
+
+26) what is the o/p?
+
+interface I1
+{
+	default void m1()
+	{
+		System.out.println("In I1()");
+	}
+}
+interface I2
+{
+	default void m1()
+	{
+		System.out.println("In I2()");
+	}
+}
+
+public class Demo implements I1,I2 {
+
+	public static void main(String[] args) {
+		Demo d = new Demo();
+		d.m1();
+	}
+
+	@Override
+	public void m1() {
+		I2.super.m1();
+	}	 
+}
+
+a) compilation error (class Demo inherits unrelated defaults for m1() from types I1 and I2 public class Demo implements I1,I2 {)
+b) no O/P
+c) In I1 
+    In I2
+d) In I2
+
+Answer: - d
+
+
+27) Abstract class can contain constructor.
+a) true
+b) false
+
+Answer: - true
+
+
+
+28)
+
+what is the O/p?
+
+interface I1
+{
+	void m1();
+}
+
+interface I2
+{
+	void m1();
+}
+
+public class Demo implements I1,I2 {
+
+	public void m1(){
+		System.out.println("In m1()");
+	}
+	public static void main(String[] args) {
+		Demo d = new Demo();
+		d.m1();		
+	}	 
+}
+
+a) compilation error
+b) In m1()
+c) Exception
+d) None of the above
+
+Answer: - b
+
+
+29)
+what is the O/p?
+
+interface I1
+{
+	void m1();
+}
+
+interface I2 extends I1
+{
+	void m2();
+}
+
+public class Demo implements I2 {
+
+	public void m2(){
+		System.out.println("In m2()");
+	}
+	public static void main(String[] args) {
+		Demo d = new Demo();
+		d.m1();		
+	}	 
+}
+
+a) compilation error
+b) Exception
+c) In m2()
+d) None of the above
+
+Answer: - c
