@@ -464,3 +464,21 @@ Answer: - a
 	    provides fullyqualifiedinterfaceName with fullyqualifiedclassnameName;
 
 Answer: - b
+
+
+32)
+Which of the following annotations is used to identify a specific bean of same type if there are many in container?
+	
+	a) @Qualifier
+	b) @Autowired
+	c) @Bean
+	d) None
+
+Answer: - a
+
+33)
+Can we make multiple entrie of same bean even if it singleton.
+a) true
+b) false
+
+Answer: - a
