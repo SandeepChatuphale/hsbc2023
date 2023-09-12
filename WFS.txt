@@ -482,3 +482,12 @@ a) true
 b) false
 
 Answer: - a
+
+
+33) Which of the follwoing is NOT valid advice type.
+a) Before
+b) After
+c) Around
+d) AfterReturning
+e) AfterThrowing
+f) none of the above
