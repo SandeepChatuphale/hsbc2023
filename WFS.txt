@@ -558,3 +558,23 @@ c) HttpURLConnection
 d) RestClient
 
 Answer: - a
+
+43)
+@FunctionalInterface
+public interface T {
+
+	void h();
+	
+	private void j() {}
+	
+	default void k() {}
+	
+	static void m() {}
+}
+
+a) Compiles Fine
+b) Compilation Error due to method j()
+c) Exception
+d) None of the above
+
+Answer: - a
