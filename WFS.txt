@@ -506,3 +506,37 @@ a) true
 b) false
 
 Answer: - a
+
+37) Recommended port for eureka is
+a) 8080
+b) 8761
+c) 9090
+d) 8888
+Answer:- b
+
+
+38) Annotation used to enable Eureka Server is
+a) @EnableEurekaServer
+b) @EnableServer
+c) @Eureka
+d) @EurekaEnableSrrver
+
+Answer: - a
+
+
+39) Annotation used to enable Eureka Server is
+a) @EnableEurekaClient
+b) @EnableClient
+c) @Client
+d) @EurekaEnableClient
+
+Answer: - a
+
+
+40) Property used to mention eureka server
+a) eureka.client.service-url.defaultZone=http://localhost:8761/eureka
+a) eureka.client.defaultZone=http://localhost:8761/eureka
+a) eureka.service-url.defaultZone=http://localhost:8761/eureka
+a) none of the above
+
+Answer: - a
